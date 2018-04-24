@@ -6,10 +6,10 @@ CSS_FILES=()
 CSS_FILES_COUNTER=0
 for FILE in $STAGED_FILES
 do
-  if [[ "$FILE" =~ .js$ ]]; then
+  if [[ "$FILE" =~ .jsx?$ ]]; then
     JS_FILES[JS_FILES_COUNTER]="$FILE"
     (( JS_FILES_COUNTER++ ))
-  elif [[ "$FILE" =~ .css$ ]]; then
+  elif [[ "$FILE" =~ .s?css$ ]]; then
     CSS_FILES[CSS_FILES_COUNTER]="$FILE"
     (( CSS_FILES_COUNTER++ ))
   fi
