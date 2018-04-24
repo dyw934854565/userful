@@ -1,0 +1,21 @@
+{
+  "eslint.enable": true,
+  "eslint.options": { "configFile": ".eslintrc.js" },
+  "eslint.run": "onType",
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "[css]": {
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "prettier.stylelintIntegration": true,
+  "prettier.eslintIntegration": true
+}
