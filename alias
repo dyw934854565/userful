@@ -1,0 +1,30 @@
+# base
+alias ll="ls -laf"
+
+# npm
+alias ns="npm start"
+alias nr="npm run"
+alias ni="npm install -S"
+alias nig="npm install -g"
+alias nid="npm install -D"
+
+# yarn
+alias ys="yarn start"
+alias y="yarn"
+alias ya="yarn add"
+alias yad="yarn add --dev"
+alias yap="yarn add --peer"
+alias yu="yarn up"
+alias yrm="yarn remove"
+
+# git
+alias gpull="git pull"
+alias gpush="git push"
+alias gmg="git merge"
+alias gcm="git commit -a -m"
+alias gst="git status"
+alias gbr="git branch"
+alias gf="git flow"
+alias gff="git flow feature"
+alias gfr="git flow release"
+alias gfh="git flow hotfix"
