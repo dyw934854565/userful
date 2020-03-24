@@ -108,3 +108,6 @@ brew install nginx
 
 # git flow
 brew install git-flow-avh
+
+# postman
+brew cask install postman
