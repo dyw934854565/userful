@@ -111,3 +111,15 @@ brew install git-flow-avh
 
 # postman
 brew cask install postman
+
+# docker
+brew cask install docker
+
+mkdir /etc/docker
+cat > /etc/docker/daemon.json << EOF
+{
+    "registry-mirrors": ["https://registry.docker-cn.com"]
+}
+EOF
+
+brew install docker-compose
