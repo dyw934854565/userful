@@ -99,6 +99,8 @@ then
 npm install -g yarn
 fi
 
+yarn global add lerna
+
 
 # iterm2
 brew cask install iterm2
