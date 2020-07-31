@@ -114,6 +114,10 @@ brew install git-flow-avh
 # postman
 brew cask install postman
 
+
+# SwitchHosts
+brew cask install switchhosts
+
 # docker
 brew cask install docker
 
