@@ -53,7 +53,7 @@ brew update
 fi
 
 # vscode
-brew cask install visual-studio-code
+brew install --cask visual-studio-code
 
 if ! hasCommand code
 then
@@ -65,8 +65,8 @@ EOF
 source $RC_PATH
 fi
 
-# 安装vscode插件
-code --install-extension shan.code-settings-sync
+# 安装vscode插件，vscode自带同步了
+# code --install-extension shan.code-settings-sync
 
 # nvm node
 if ! hasCommand nvm
@@ -103,29 +103,29 @@ yarn global add lerna
 
 
 # iterm2
-brew cask install iterm2
+brew install --cask iterm2
 
 # nginx
-brew install nginx
+# brew install nginx
 
 # git flow
 brew install git-flow-avh
 
 # postman
-brew cask install postman
+brew install --cask postman
 
 
 # SwitchHosts
-brew cask install switchhosts
+brew install --cask switchhosts
 
 # docker
-brew cask install docker
+# brew install --cask  docker
 
-mkdir /etc/docker
-cat > /etc/docker/daemon.json << EOF
-{
-    "registry-mirrors": ["https://registry.docker-cn.com"]
-}
-EOF
+# mkdir /etc/docker
+# cat > /etc/docker/daemon.json << EOF
+# {
+#     "registry-mirrors": ["https://registry.docker-cn.com"]
+# }
+# EOF
 
-brew install docker-compose
+# brew install docker-compose
