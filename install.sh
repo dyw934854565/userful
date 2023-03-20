@@ -74,9 +74,9 @@ then
 echo "install nvm"
 brew install nvm
 
-nvmPath="~/.nvm"
-if [ ! -d "$nvmPath"]; then
-  mkdir "$nvmPath"
+nvmPath=~/.nvm
+if [ ! -d $nvmPath ]; then
+  mkdir $nvmPath
 fi
 
 cat << EOF >> $RC_PATH
@@ -129,3 +129,21 @@ brew install --cask switchhosts
 # EOF
 
 # brew install docker-compose
+
+
+# ssh
+
+sshPath=~/.ssh/id_rsa.pub
+if [ ! -f $sshPath ]; then
+    echo "生成git加密对， 可连续回车。\r\n"
+    ssh-keygen -o
+fi
+
+echo "以下是公钥内容，手动复制.\r\n"
+
+cat $sshPath
+
+echo "\n"
+
+echo "去github添加: https://github.com/settings/keys"
+
