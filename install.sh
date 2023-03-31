@@ -1,6 +1,9 @@
 #!/bin/zsh
 
 # shell client
+
+echo "检测命令行工具"
+
 if test -n "$ZSH_VERSION"; then
   echo "zsh"$ZSH_VERSION
   PROFILE_SHELL=zshrc
@@ -36,6 +39,8 @@ source $RC_PATH
 fi
 
 # 安装brew
+
+echo "安装brew，可以用它来装其他软件"
 if ! hasCommand brew
 then
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -53,8 +58,12 @@ brew update
 fi
 
 # vscode
+
+echo "安装vscode"
 brew install --cask visual-studio-code
 
+
+echo "注入code命令，可以用'code ./myproject'来打开vscode到对应目录"
 if ! hasCommand code
 then
 # Add Visual Studio Code (code)
@@ -69,6 +78,7 @@ fi
 # code --install-extension shan.code-settings-sync
 
 # nvm node
+echo "安装nvm管理node版本"
 if ! hasCommand nvm
 then
 echo "install nvm"
@@ -88,21 +98,26 @@ EOF
 source $RC_PATH
 fi
 
+
+echo "使用nvm安装最新lts版本node"
 if ! hasCommand node
 then
 nvm install --lts
 fi
 
 # npm package -g
+echo "全局安装yarn"
 if ! hasCommand yarn
 then
 npm install -g yarn
 fi
 
+echo "全局安装lerna package管理工具"
 yarn global add lerna
 
 
 # iterm2
+echo "安装 iterm2"
 brew install --cask iterm2
 
 # nginx
@@ -112,14 +127,16 @@ brew install --cask iterm2
 brew install git-flow-avh
 
 # postman
+echo "安装 postman 用于调试接口"
 brew install --cask postman
 
 
 # SwitchHosts
+echo "安装 SwitchHosts 用于修改本地host"
 brew install --cask switchhosts
 
-# docker
-# brew install --cask  docker
+# 不需要 docker
+# brew install --cask docker
 
 # mkdir /etc/docker
 # cat > /etc/docker/daemon.json << EOF
